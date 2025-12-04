@@ -14,6 +14,7 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+print("✅ FastAPI APP LOADED SUCCESSFULLY")
 
 # ---------------------
 # TEMP MEMORY DATABASE (for now)
