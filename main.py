@@ -1,13 +1,15 @@
-from fastapi import FastAPI, Request
+from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from typing import List, Dict
 
 app = FastAPI()
 
-# ✅ Enable CORS for Firebase hosting
+# ✅ Allow Firebase frontend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],   # You can lock later
+    allow_origins=[
+        "https://cryptoria-23fa5.web.app",
+        "http://localhost:5173"
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
